@@ -25,11 +25,12 @@
     </head>
 
     <body class="{% block body_class %}{% endblock %}">
-        {% wagtailuserbar %}
         <header class="header">
             <a href="/"><img src="/media/images/icons8-duolingo-logo-50.max-165x165.png" alt="logo"/>HOME</a>
             <a href="/blog">Blog</a>
         </header>
+        {% wagtailuserbar %}
+        
         {% block content %}{% endblock %}
 
         {# Global javascript #}

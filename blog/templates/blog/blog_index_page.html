@@ -13,8 +13,10 @@
 
 ...
 
+<div class="display-blog">
     {% for post in blogpages %}
         {% with post=post.specific %}
+        <div class="grid-articles">
             <h2><a href="{% pageurl post %}">{{ post.title }}</a></h2>
 
             {% with post.main_image as main_image %}
@@ -23,8 +25,9 @@
 
             <p>{{ post.intro }}</p>
             {{ post.body|richtext }}
+        </div>
         {% endwith %}
     {% endfor %}
-
+</div>
 {% endblock %}
 

@@ -10,6 +10,7 @@
 
 		{% with categories=page.categories.all %}
     {% if categories %}
+    <div class="categorie-content">
         <h3>Posted in:</h3>
         <ul>
             {% for category in categories %}
@@ -19,6 +20,8 @@
                 </li>
             {% endfor %}
         </ul>
+    </div>
+        
     {% endif %}
 {% endwith %}
 
@@ -42,6 +45,6 @@
     </div>
 {% endif %}
 
-    <p><a href="{{ page.get_parent.url }}">Return to blog</a></p>
+    <p class="return-btn"><a href="{{ page.get_parent.url }}">Return to blog</a></p>
 
 {% endblock %}
